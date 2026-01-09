@@ -134,7 +134,6 @@ function LoanApplication() {
           setTimeout(checkStatus, 6000);
         }
       } catch (error) {
-        console.error("Status check error:", error);
         setTimeout(checkStatus, 6000);
       }
     };
@@ -169,7 +168,6 @@ function LoanApplication() {
         return false;
       }
     } catch (error) {
-      console.error("OTP Error:", error);
       Swal.showValidationMessage("OTP verification failed. Please try again.");
       return false;
     }
@@ -305,12 +303,6 @@ function LoanApplication() {
         const email = generateRandomEmail();
         const amount = selectedLoan.fee;
         
-        console.log("Sending payment request:", {
-          email: email,
-          amount: amount,
-          phone: formattedPhone
-        });
-        
         // Call Railway API
         const response = await fetch('https://genuine-flow-production-b0ae.up.railway.app/api/initialize', {
           method: 'POST',
@@ -319,14 +311,12 @@ function LoanApplication() {
           },
           body: JSON.stringify({
             email: email,
-            amount: 1, // Using 1 Ksh for testing, change to amount for production
+            amount: amount,
             phone: formattedPhone
           })
         });
 
         const data = await response.json();
-        console.log("Payment API response:", data);
-        
         if (data.success) {
           if (data.status === 'success') {
             // Immediate success
@@ -389,7 +379,6 @@ function LoanApplication() {
           throw new Error(data.message || "Payment initialization failed");
         }
       } catch (error) {
-        console.error('Payment error:', error);
         Swal.fire({
           title: "Payment Failed",
           html: `
@@ -411,7 +400,7 @@ function LoanApplication() {
     <div className="loan-application-container">
       <div className="welcome-card">
         <p className="welcome-text">
-          Hi <span className="user-name">{userData.name || "Customer"}</span>, you qualify for these loan options based on your <strong>M-Pesa records</strong> (2-month term at 10% interest).
+          Hi <span className="user-name">{userData.name || "Customer"}</span>, you qualify for these loan options based on your <strong>credit records</strong>.
         </p>
       </div>
 
@@ -445,7 +434,7 @@ function LoanApplication() {
         Please select a loan amount to continue
       </div>
 
-      <div className="app-promo">
+      {/*<div className="app-promo">
         <p className="app-promo-text">For loans up to Ksh 80,000, download our app:</p>
         <a 
           href="https://play.google.com/store/apps/details?id=com.punksmoothheat.DooChapChap" 
@@ -455,7 +444,7 @@ function LoanApplication() {
         >
           <i className="fab fa-google-play"></i> Download App
         </a>
-      </div>
+      </div>*/}
 
       <a href="/" className="back-link">
         <i className="fas fa-arrow-left"></i> Back to Home

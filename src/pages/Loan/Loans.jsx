@@ -1,7 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
-//import "./Loan.css"; // We'll create this CSS file
+import "./Loans.css"; // We'll create this CSS file
 
-const Loan = () => {
+const Loans = () => {
+```
   const [loanAmount, setLoanAmount] = useState(100000);
   const [loanTerm, setLoanTerm] = useState(12);
   const [phoneNumber, setPhoneNumber] = useState("0700 000 000");
@@ -371,4 +372,4 @@ const Loan = () => {
   );
 };
 
-export default Loan;
+export default Loans;

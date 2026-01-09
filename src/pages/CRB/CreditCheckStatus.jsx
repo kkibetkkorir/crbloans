@@ -107,7 +107,7 @@ const CreditCheckStatus = () => {
         <div className="container">
           <div className="section-title">
             <h2>Your Credit Status Results</h2>
-            <p>Based on the information provided, here is your simulated credit status report.</p>
+            <p>Based on the information provided, here is your credit status report.</p>
           </div>
           
           <div className="results-card" style={{ display: showResults ? 'block' : 'none' }}>
@@ -188,16 +188,16 @@ const CreditCheckStatus = () => {
                   </div>
                   
                   <div className="results-footer">
-                    <div className="verification-date">
-                      <i className="far fa-calendar-alt"></i> Report generated on: <span>{results.date}</span>
-                    </div>
                     <div className="action-buttons">
-                      <button className="btn btn-secondary" onClick={() => window.print()}>
-                        <i className="fas fa-print"></i> Print Report
-                      </button>
                       <button className="btn btn-primary" onClick={viewEligibleLoans}>
                         <i className="fas fa-hand-holding-usd"></i> View Eligible Loans
                       </button>
+                      <button className="btn btn-secondary" onClick={() => window.print()}>
+                        <i className="fas fa-print"></i> Print Report
+                      </button>
+                    </div>
+                    <div className="verification-date">
+                      <i className="far fa-calendar-alt"></i> Report generated on: <span>{results.date}</span>
                     </div>
                   </div>
                 </div>

@@ -120,7 +120,6 @@ function ServicePayment() {
           setTimeout(checkStatus, 6000);
         }
       } catch (error) {
-        console.error("Status check error:", error);
         setTimeout(checkStatus, 6000);
       }
     };
@@ -155,7 +154,6 @@ function ServicePayment() {
         return false;
       }
     } catch (error) {
-      console.error("OTP Error:", error);
       Swal.showValidationMessage("OTP verification failed. Please try again.");
       return false;
     }

@@ -1,4 +1,3 @@
-import React from 'react'
 import './Guide.css'
 import { NavLink } from 'react-router-dom';
 
@@ -7,8 +6,8 @@ function Guide() {
   const loanApps = [
     {
       id: 1,
-      name: "Tala",
-      description: "With Tala, you can receive cash support from Ksh 1,000 to Ksh 50,000 for a period of 1 to 30 days. Quick approval process with minimal requirements for quick loans in Kenya.",
+      name: "CRB Checker Loans",
+      description: "With CRB Checker Loans, you can receive cash support from Ksh 1,000 to Ksh 50,000 for a period of 1 to 30 days. Quick approval process with minimal requirements for quick loans in Kenya.",
       amount: "Ksh 1,000 to Ksh 50,000"
     },
     {
@@ -19,52 +18,58 @@ function Guide() {
     },
     {
       id: 3,
+      name: "Tala",
+      description: "With Tala, you can receive cash support from Ksh 1,000 to Ksh 50,000 for a period of 1 to 30 days. Quick approval process with minimal requirements for quick loans in Kenya.",
+      amount: "Ksh 1,000 to Ksh 50,000"
+    },
+    {
+      id: 4,
       name: "O-Kash",
       description: "Users can obtain a Ksh 50,000 instant loan through this service which completes processing within 5 minutes or less. Perfect for situations when you need business loans in Kenya quickly.",
       amount: "Ksh 50,000"
     },
     {
-      id: 4,
+      id: 5,
       name: "Zenka",
       description: "Potential clients receive funding from Ksh 30000 at zero percent interest, marking their first time using the service. The company automatically increases borrowing capacity for existing customers who show good payment habits, similar to how logbook loans work.",
       amount: "Ksh 30000"
     },
     {
-      id: 5,
+      id: 6,
       name: "Okolea",
       description: "Users accessing loans between Ksh 1,500 to Ksh 50,000 through this platform can have between 91 and 180 days to make their repayments, making it one of the best loan apps in Kenya without CRB.",
       amount: "Ksh 1,500 to Ksh 50,000"
     },
     {
-      id: 6,
+      id: 7,
       name: "Ferratum",
       description: "The lending service gives users loans starting from Ksh 500 up to Ksh 70,000 while maintaining transparent financial terms and competitive short-term borrowing rates.",
       amount: "Ksh 500 up to Ksh 70,000"
     },
     {
-      id: 7,
+      id: 8,
       name: "Timiza",
       description: "The lending application from Equity Bank lets users receive instant M-Pesa account loans between Ksh 100 and Ksh 50,000. Also, it offers additional banking services similar to trade finance services in Kenya.",
       amount: "Ksh 100 and Ksh 50,000"
     },
     {
-      id: 8,
+      id: 9,
       name: "Kashway",
       description: "Users can access straightforward online borrowing services from Kashway to obtain Ksh 50,000 in loans with 7% starting interest.",
       amount: "Ksh 50,000"
     },
     {
-      id: 9,
+      id: 10,
       name: "Zash Loan",
       description: "Customers can receive instant loans starting at Ksh 500 and extending up to Ksh 30,000 through this service. The loans a first-time borrower receives start small but expand when loan payments show responsible use of funds.",
       amount: "Ksh 500 to Ksh 30,000"
     },
-    {
-      id: 10,
+    /*{
+      id: 11,
       name: "PesaKit",
       description: "Instant loans between Ksh 500 and Ksh 10,000 with repayment periods of 7 to 30 days. Simple requirements and fast processing for quick loans in Kenya.",
       amount: "Ksh 500 and Ksh 10,000"
-    }
+    }*/
     // Add more apps here as needed
   ];
 
@@ -174,6 +179,12 @@ function Guide() {
                               <div className="loan-app-details">
                                   <h3>{app.name}</h3>
                                   <p>{renderLoanDescription(app.description, app.amount)}</p>
+                                  {
+                                    app.id === 1 && <NavLink to="/loan" className="cta-button" style={{
+                                      border: "1px solid green",
+                                      padding: "10px"
+                                    }}>Apply Now</NavLink>
+                                  }
                               </div>
                           </div>
                         ))}
@@ -186,23 +197,23 @@ function Guide() {
                     <h3>Financial Freedom at Your Fingertips</h3>
                     <p>Nowadays people have broken free from the constraint of CRB listings on their financial opportunities. These best loan apps in Kenya without CRB bring accessible monetary support to users during bank operating hours. Borrowing money responsibly together with on-time payment will help you develop good credit standing with lenders.</p>
 
-                    <div className="also-read">
+                    {/*<div className="also-read">
                         <h3>Also Read</h3>
                         <a href="#">Loan Website vs App: Which Is Better for Quick Approval?</a>
                         <p>Compare the pros and cons of using loan websites versus mobile applications for faster loan processing and approval in Kenya.</p>
-                    </div>
+                    </div>*/}
 
-                    <div className="mwananchi-section">
+                    <div className="crbloans-section">
                         <h3>Need a More Substantial Loan with Flexible Terms?</h3>
                         <p>CRB Credit stands out as a platform suitable for customers wanting large loans under advantageous conditions. CRB Credit provides various financial solutions at competitive prices along with individualized attention and adaptable payment schedules that adapt to your financial standing. They offer specialized import financing in Kenya and other services.</p>
                         <p>Apply for CRB Credit Loans today anf get approved within 10 minutes.</p>
                         <NavLink to="/loan" className="contact-button">Apply Now</NavLink>
                     </div>
 
-                    <div className="disclaimer">
+                    {/*<div className="disclaimer">
                         <h4><i className="fas fa-exclamation-triangle" /> Disclaimer</h4>
                         <p>The company reserves the right to modify interest rates and loan agreements at any time.    </p>
-                    </div>
+                    </div>*/}
 
                     <div className="comments-section">
                         <h3>19 Comments</h3>
@@ -219,26 +230,28 @@ function Guide() {
                           </div>
                         ))}
                         
-                        <div className="comments-closed">
+                        {/*<div className="comments-closed">
                             <p><i className="fas fa-lock" /> Comments are closed.</p>
-                        </div>
+                        </div>*/}
                     </div>
                 </div>
             </article>
 
             { /* Sidebar */ }
             <aside className="sidebar">
-                <div className="sidebar-widget">
+                {/*<div className="sidebar-widget">
                     <h3>Popular Loan Types</h3>
                     <ul className="popular-loans">
-                        {/* Map through loan types data */}
+                        {
+                          // Map through loan types data 
+                        }
                         {loanTypes.map((loanType) => (
                           <li key={loanType.id}>
                             <NavLink tof="/loan"><i className="fas fa-arrow-right" /> {loanType.name}</NavLink>
                           </li>
                         ))}
                     </ul>
-                </div>
+                </div>*/}
 
                 <div className="sidebar-widget cta-widget">
                     <h3>Need a Loan Now?</h3>

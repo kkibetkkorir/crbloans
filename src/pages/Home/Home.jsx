@@ -1,6 +1,7 @@
 import React from "react";
 import './Home.css'
 import { useNavigate } from "react-router-dom";
+import Banner from '../../assets/banner.png'
 
 function Home() {
   const navigator = useNavigate();
@@ -28,7 +29,7 @@ function Home() {
               }}>Check Credit Status <i className="fas fa-arrow-right"></i></button>
             </div>
             <div className="hero-image">
-              <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Financial Services in Kenya" />
+              <img src={Banner/*https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80*/} alt="Financial Services in Kenya" />
             </div>
           </div>
         </div>
@@ -60,7 +61,7 @@ function Home() {
             
             <div className="feature-card">
               <div className="feature-icon">
-                <i className="fas fa-file-certificate"></i>
+                <i className="fas fa-certificate"></i>
               </div>
               <h3>Get Clearance Certificates</h3>
               <p>Obtain CRB clearance certificates required by employers, landlords, and financial institutions.</p>

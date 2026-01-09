@@ -18,7 +18,7 @@ function App() {
         <div className="header-content">
           <div className="logo">
             <i className="fas fa-wallet"></i>
-            <h1>CRB Credit<span>Check</span></h1>
+            <h1>CRB <span>Checker</span></h1>
             <div className="kenya-flag" title="Kenya"></div>
           </div>
         </div>
@@ -43,7 +43,7 @@ function App() {
         </NavLink>
         <NavLink to="/crb-check" className="nav-item">
             <i className="fas fa-hand-holding-usd" />
-            <span>CRB Check</span>
+            <span>Check CRB</span>
         </NavLink>
         <NavLink to="/loan" className="nav-item">
             <i className="fas fa-money-check-alt" />
