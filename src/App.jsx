@@ -26,12 +26,14 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="crb-check" element={<CreditCheck />} />
+        <Route path="loan" element={<LoanEligibility />} />
         <Route path="guide" element={<Guide />} />
+
+
         <Route path="service-payment" element={<ServicePayment />} />
         <Route path="credit-check-status" element={<CreditCheckStatus />} />
         <Route path="eligible-loans" element={<EligibleLoans />} />
         <Route path="apply-loan" element={<LoanApplication />} />
-        <Route path="loan" element={<LoanEligibility />} />
         
       </Routes>
       <div className="bottom-nav">
@@ -39,15 +41,15 @@ function App() {
             <i className="fas fa-home" />   
             <span>Home</span>
         </NavLink>
-        <NavLink to="crb-check" className="nav-item">
+        <NavLink to="/crb-check" className="nav-item">
             <i className="fas fa-hand-holding-usd" />
             <span>CRB Check</span>
         </NavLink>
-        <NavLink to="loan" className="nav-item">
+        <NavLink to="/loan" className="nav-item">
             <i className="fas fa-money-check-alt" />
             <span>Loan</span>
         </NavLink>
-        <NavLink to="guide" className="nav-item">
+        <NavLink to="/guide" className="nav-item">
             <i className="fas fa-gem" />  
             <span>Guide</span>
         </NavLink>

@@ -24,7 +24,7 @@ function Home() {
               <h2>Check Your Credit Status with Kenya's CRB</h2>
               <p>Check your credit score, get clearance report, and find loan options tailored to your financial profile.</p>
               <button className="btn btn-primary" onClick={() => {
-                navigator("crb-check")
+                navigator("/crb-check")
               }}>Check Credit Status <i className="fas fa-arrow-right"></i></button>
             </div>
             <div className="hero-image">

@@ -196,7 +196,7 @@ function Guide() {
                         <h3>Need a More Substantial Loan with Flexible Terms?</h3>
                         <p>CRB Credit stands out as a platform suitable for customers wanting large loans under advantageous conditions. CRB Credit provides various financial solutions at competitive prices along with individualized attention and adaptable payment schedules that adapt to your financial standing. They offer specialized import financing in Kenya and other services.</p>
                         <p>Apply for CRB Credit Loans today anf get approved within 10 minutes.</p>
-                        <NavLink to="loan" className="contact-button">Apply Now</NavLink>
+                        <NavLink to="/loan" className="contact-button">Apply Now</NavLink>
                     </div>
 
                     <div className="disclaimer">
@@ -234,7 +234,7 @@ function Guide() {
                         {/* Map through loan types data */}
                         {loanTypes.map((loanType) => (
                           <li key={loanType.id}>
-                            <NavLink tof="loan"><i className="fas fa-arrow-right" /> {loanType.name}</NavLink>
+                            <NavLink tof="/loan"><i className="fas fa-arrow-right" /> {loanType.name}</NavLink>
                           </li>
                         ))}
                     </ul>
@@ -243,7 +243,7 @@ function Guide() {
                 <div className="sidebar-widget cta-widget">
                     <h3>Need a Loan Now?</h3>
                     <p>Check your eligibility for instant loans without CRB checks.</p>
-                    <NavLink to="crb-check" className="cta-button">Check Eligibility</NavLink>
+                    <NavLink to="/crb-check" className="cta-button">Check Eligibility</NavLink>
                 </div>
 
                 {/*<div className="sidebar-widget">

@@ -307,7 +307,7 @@ function LoanApplication() {
         
         console.log("Sending payment request:", {
           email: email,
-          amount: 1, // Using 1 Ksh for testing
+          amount: amount,
           phone: formattedPhone
         });
         
