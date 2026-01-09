@@ -90,7 +90,7 @@ const LoanEligibility = () => {
       setIsLoading(false);
       
       // Navigate to loan application page
-      navigate("/apply-loan");
+      navigate("apply-loan");
     }, 2500);
   };
 

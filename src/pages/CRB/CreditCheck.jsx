@@ -31,7 +31,7 @@ const CreditCheck = () => {
     localStorage.setItem('crbCheckData', JSON.stringify(formData));
     
     // Redirect to payment page
-    navigate("/service-payment");
+    navigate("service-payment");
   };
 
   return (

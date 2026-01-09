@@ -22,7 +22,7 @@ const CreditCheckStatus = () => {
       generateResults(JSON.parse(storedData));
     } else {
       // If no payment, redirect to checker
-      navigate("/credit-check-status");
+      navigate("credit-check-status");
     }
   }, [navigate]);
 
@@ -83,7 +83,7 @@ const CreditCheckStatus = () => {
   };
 
   const viewEligibleLoans = () => {
-    navigate("/eligible-loans");
+    navigate("eligible-loans");
   };
 
   if (!paymentVerified) {
@@ -92,7 +92,7 @@ const CreditCheckStatus = () => {
         <div className="payment-required">
           <h2>Payment Required</h2>
           <p>Please complete the payment to view your CRB status results.</p>
-          <button className="btn btn-primary" onClick={() => navigate("/service-payment")}>
+          <button className="btn btn-primary" onClick={() => navigate("service-payment")}>
             Proceed to Payment
           </button>
         </div>

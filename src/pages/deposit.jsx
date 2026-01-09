@@ -101,7 +101,7 @@ function ServicePayment() {
               icon: "success",
               confirmButtonText: "View Results",
             }).then(() => {
-              navigate("/credit-check-status");
+              navigate("credit-check-status");
             });
             return;
           }
@@ -240,7 +240,7 @@ function ServicePayment() {
             icon: "success",
             confirmButtonText: "View Results",
           }).then(() => {
-            navigate("/credit-check-status");
+            navigate("credit-check-status");
           });
         } else if (data.requires_authorization) {
           // STK Push - Show authorization message
